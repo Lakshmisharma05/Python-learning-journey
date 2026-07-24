@@ -35,3 +35,4 @@ class LinkedList:
         else:
             self.head = current_node.next
         self.length -= 1
+#complete the basic linked list
