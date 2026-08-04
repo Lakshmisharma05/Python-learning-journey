@@ -1,0 +1,20 @@
+def verify_card_number(card_number):
+
+    clean_number = card_number.replace(' ', '').replace('-', '')
+    
+   
+    account_number = [int(digit) for digit in clean_number]
+    
+    
+    for i in range(len(account_number) - 2, -1, -2):
+        account_number[i] *= 2
+        if account_number[i] > 9:
+            account_number[i] -= 9
+            
+    
+    total = sum(account_number)
+    
+    if total % 10 == 0:
+        return "VALID!"
+    else:
+        return "INVALID!" 
